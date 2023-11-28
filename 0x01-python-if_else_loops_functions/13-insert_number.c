@@ -22,7 +22,8 @@ if (*head == NULL)
 {
 *head = new_node;
 new_node->next = NULL;
-new_node->n = number; }
+new_node->n = number;
+return (new_node); }
 if((*head)->n > number)
 {
 new_node->next = *head;
