@@ -39,8 +39,7 @@ new_node->n = number;
 ca->next = new_node;
 return (new_node); }
 ca = current;
-current = current->next;
-}
+current = current->next; }
 if (current->n > number)
 {
 new_node->next = current;
@@ -52,4 +51,4 @@ else
 new_node->next = NULL;
 new_node->n = number;
 current->next = new_node; }
-return (new_node); }}
+return (new_node); }
