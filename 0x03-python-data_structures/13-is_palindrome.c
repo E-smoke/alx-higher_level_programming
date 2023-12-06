@@ -12,7 +12,7 @@ listint_t *current0;
 sum = 0;
 sum0 = 0;
 num0 = 2;
-if (*head == NULL)
+if (head == NULL || *head == NULL)
 {
 return (1); }
 num = 0;
