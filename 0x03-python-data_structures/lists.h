@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <Python.h>
 
 /**
  * struct listint_s - singly linked list
