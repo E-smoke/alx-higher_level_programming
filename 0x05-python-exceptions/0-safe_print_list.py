@@ -4,7 +4,7 @@ def safe_print_list(my_list=[], x=0):
     try:
         for j in range(x):
             print("{:d}".format(my_list[x]), end='')
-            i += 1;
+            i += 1
     except Exception:
         print()
         return i
