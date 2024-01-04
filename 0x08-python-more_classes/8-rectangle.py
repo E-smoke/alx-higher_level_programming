@@ -5,6 +5,10 @@
 class Rectangle:
     """class Rectangle"""
 
+    number_of_instances = 0
+
+    print_symbol = "#"
+
     @property
     def width(self):
         """return width"""
@@ -37,6 +41,7 @@ class Rectangle:
         """init mehtod"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def area(self):
         """area"""
@@ -63,3 +68,22 @@ class Rectangle:
                     rep = "{}{}".format(rep, self.print_symbol)
                 rep += append
             return rep
+
+    def __repr__(self):
+        """repr"""
+        return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        """destructor"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if type(rect_1) != Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) != Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
