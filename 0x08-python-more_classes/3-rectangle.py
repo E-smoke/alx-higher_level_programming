@@ -60,6 +60,6 @@ class Rectangle:
                 if i == self.height - 1:
                     append = ""
                 for j in range(self.width):
-                    rep = "{}{}".format(rep, self.print_symbol)
+                    rep += "#"
                 rep += append
             return rep
