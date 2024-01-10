@@ -2,7 +2,21 @@
 """rectangle module"""
 
 
-from 7-base_geometry.py import BaseGeometry as BaseGeometry
+class BaseGeometry:
+    """base geometry"""
+
+    def area(self):
+        """a function"""
+
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """a function"""
+
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
