@@ -69,3 +69,14 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
+    def area(self):
+        """area"""
+        return self.width * self.height
+
+    def display(self):
+        """display"""
+        for i in range(self.height):
+            for j in range(self.width):
+                print('#', end="")
+            print()
