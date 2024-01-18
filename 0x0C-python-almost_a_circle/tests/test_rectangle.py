@@ -61,6 +61,16 @@ class test_rectangle(unittest.TestCase):
             obj = Rectangle(3, 5)
             obj.__width
 
+    def test_TypeError2(self):
+        """Type Error 2"""
+        with self.assertRaises(TypeError):
+            obj = Rectangle("4t", 5)
+
+    def test_ValueError(self):
+        """Value Error"""
+        with self.assertRaises(ValueError):
+            obj = Rectangle(-3, 4)
+
     def test_area(self):
         """test area"""
         obj = Rectangle(3, 5)
