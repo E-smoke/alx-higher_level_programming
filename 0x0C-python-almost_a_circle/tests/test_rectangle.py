@@ -45,3 +45,8 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(obj.height, 7)
         self.assertEqual(obj.x, 2)
         self.assertEqual(obj.y, 2)
+
+    def test_area(self):
+        """test area"""
+        obj = Rectangle(3, 5)
+        self.assertEqual(obj.area(), 15)
