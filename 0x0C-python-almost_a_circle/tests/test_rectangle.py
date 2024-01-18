@@ -70,14 +70,3 @@ class test_rectangle(unittest.TestCase):
         """Value Error"""
         with self.assertRaises(ValueError):
             obj = Rectangle(-3, 4)
-
-    def test_area(self):
-        """test area"""
-        obj = Rectangle(3, 5)
-        self.assertEqual(obj.area(), 15)
-
-    def test_areaRaises(self):
-        """area Raise error"""
-        with self.assertRaises(TypeError):
-            obj  = Rectangle(6, 7)
-            obj.area(2)
