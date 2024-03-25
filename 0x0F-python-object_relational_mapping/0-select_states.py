@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''first sqldb project'''
+
+
 import sys
 import mysql.connector as connector
 
