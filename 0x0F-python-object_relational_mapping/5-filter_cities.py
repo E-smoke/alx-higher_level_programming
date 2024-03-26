@@ -13,8 +13,10 @@ if __name__ == "__main__":
     query2 = "_id = (SELECT id FROM states WHERE name = %s LIMIT 1) "
     query3 = "ORDER BY id ASC"
     mycursor.execute(query1 + query2 + query3, (sys.argv[4],))
-    result = mycursor.fetchone()
+    result = mycursor.fetchone()[0]
     if result:
-        print(result[0])
+        print(result)
+    else:
+        print()
     mycursor.close()
     mydb.close()
