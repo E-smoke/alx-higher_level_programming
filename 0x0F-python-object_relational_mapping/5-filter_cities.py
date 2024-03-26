@@ -14,6 +14,7 @@ if __name__ == "__main__":
     query3 = "ORDER BY id ASC"
     mycursor.execute(query1 + query2 + query3, (sys.argv[4],))
     result = mycursor.fetchone()
-    print(result[0])
+    if result:
+        print(result[0])
     mycursor.close()
     mydb.close()
