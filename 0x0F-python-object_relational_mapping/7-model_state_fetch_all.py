@@ -8,11 +8,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-pattern = "mysql://{}:{}@localhost/{}"
-engine = create_engine(pattern.format(sys.argv[1], sys.argv[2], sys.argv[3]))
-Session = sessionmaker(bind=engine)
-session = Session()
-state = session.query(State).order_by(State.id).all()
-for i in state:
-    print("{}:".format(i.id), i.name)
-session.close()
+if __name__ == '__main__':
+    pattern = "mysql://{}:{}@localhost:3306/{}"
+    engine = create_engine(pattern.format(sys.argv[1],
+                           sys.argv[2], sys.argv[3]))
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    state = session.query(State).order_by(State.id).all()
+    for i in state:
+        print("{}:".format(i.id), i.name)
+    session.close()
